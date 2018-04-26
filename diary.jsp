@@ -5,24 +5,13 @@
 <head>
 <title> Diary Entry </title>
 
-<script language="JavaScript">
-<%!
-        function input(){
-                document.getElementById("table").insertRow(0).innerHTML = "<tr><td>author</td><td>comment</td></tr>";
-
-        }
-%>
-</script>
-
-
-
-</head>
+<head>
 <body>
         <jsp:useBean id="diaryBean" class="diary.DiaryBean" scope="session"/>
         <jsp:setProperty name ="diaryBean" property ="*" />
-        <h1 style="color:green"> Diary Entry </h1>
+        <h1 style="color:blue"> Diary Entry </h1>
 <form method ="GET" action = "http://172.17.149.181:8080/Diary/index.jsp">
-<table id="table">
+<table border = "1" cellpadding = "10">
 <tr>
         <th>Author </th>
         <th>Comment</th>
@@ -48,8 +37,11 @@
 </select>
 
 <br><textarea name ="comment" rows="4" cols="80"></textarea>
-<br><input type ="submit" value="Post" onclick="input()">
+<br><input type ="submit" value="Post">
+
 
 </form>
 </body>
 </html>
+
+
