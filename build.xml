@@ -18,7 +18,7 @@
                 </javac>
         </target>
 
-        <target name ="run-test" depends = "compile-test">
+        <target name ="run-dbtest" depends = "compile-test">
                 <junit>
                         <classpath>
                                 <pathelement location ="test_classes"/>
@@ -28,12 +28,10 @@
                         <formatter type = "plain" usefile = "false"/>
                 </junit>
         </target>
-
-        <target name ="deploy" depends = "run-test">
+	<target name ="deploy" depends = "run-dbtest">
                 <move file ="classes/diary" todir="/var/lib/tomcat7/webapps/Diary/WEB-INF/classes"/>
                 <copy file="../anokhi/main/csci4300/jstl-1.2.jar" todir="/var/lib/tomcat7/webapps/Diary/WEB-INF/lib"/>
                 <copy file="jsp/index.jsp" todir="/var/lib/tomcat7/webapps/Diary"/>
         </target>
-
-
 </project>
+
