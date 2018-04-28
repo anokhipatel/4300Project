@@ -28,7 +28,7 @@
 
   <target name="deploy" depends="run-test">
     <copy file="jsp/index.jsp" todir="/var/lib/tomcat7/webapps/GradeCalc/"/>
-    <move file="classes/gradeCalc/" todir="/var/lib/tomcat7/webapps/GradeCalc/WEB-INF/classes/gradeCalc"/>
+    <move file="classes/gradeCalc" todir="/var/lib/tomcat7/webapps/GradeCalc/WEB-INF/"/>
   </target>
 
 </project>

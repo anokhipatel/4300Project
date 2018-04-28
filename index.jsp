@@ -3,7 +3,11 @@
 	<title>Grade Calculator</title>
 	<meta charset="UTF-8">
 
-	<style></style>
+	<style>
+	  .p{
+	  
+	  }
+	</style>
 	<script>
 
 	/**
@@ -49,8 +53,9 @@
 <body>
 
   <jsp:useBean id="gradeCalc" class="gradeCalc.Calc" scope="session"></jsp:useBean>
+  <jsp:setProperty name="gradeCalc" property="*" />
   
-  <form method="POST" action="172.17.149.143:8080/jsp/gradeCalc.jsp">
+  <form method="POST" action="172.17.149.143:8080/GradeCalc/index.jsp">
     <p>Class Name: <input type="text" name="Class Name"><br>
       <br><br><br>
       <h2>Enter Grades Below:</h2><br>
@@ -61,7 +66,7 @@
       <h4>First things first. What are the Letter Grade Dispersments in your class?</h4>
     <p>
       <b>A</b>
-      <p>Above:<input type="text" id="AMax" value="${gradeCalc.AMax}"/></p>
+      <p>Above:<input type="text" id="AMin" value="${gradeCalc.AMin}"/></p>
     </p>
     <p>
       <b>B</b>
@@ -87,7 +92,7 @@
     <p>Grade:<input id="s2g" type="text" value="${gradeCalc.sect2Grade}"/>Weight:<input id="s2w" type="text" value="${gradeCalc.sect2Weight}"/></p>
     <p>Grade:<input id="s3g" type="text" value="${gradeCalc.sect3Grade}"/>Weight:<input id="s3w" type="text" value="${gradeCalc.sect3Weight}"/></p>
     <p>Grade:<input id="s4g" type="text" value="${gradeCalc.sect4Grade}"/>Weight:<input id="s4w" type="text" value="${gradeCalc.sect4Weight}"/></p>
-    <p>Grade:<input id="s5g" type="text" value="${gradeCalc.sect5Grade}"/>Weight:<input id="s5w" type="text" value="${sect5Weight}"/></p>
+    <p>Grade:<input id="s5g" type="text" value="${gradeCalc.sect5Grade}"/>Weight:<input id="s5w" type="text" value="${gradeCalc.sect5Weight}"/></p>
     <p>Grade:<input id="s6g" type="text" value="${gradeCalc.sect6Grade}"/>Weight:<input id="s6w" type="text" value="${gradeCalc.sect7Grade}"/></p>
     <p>Grade:<input id="s7g" type="text" value="${gradeCalc.sect7Grade}"/>Weight:<input id="s7w" type="text" value="${gradeCalc.sect7Weight}"/></p>
     <p>Grade:<input id="s8g" type="text" value="${gradeCalc.sect8Grade}"/>Weight:<input id="s8w" type="text" value="${gradeCalc.sect8Grade}"/></p>
