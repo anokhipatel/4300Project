@@ -31,7 +31,7 @@
 		<label>Grade:</label><input class="grade" type="text" value="${grade[2]}"><br>
 		<label>Weight:</label> <input class="weight" type="text" value="${weight[3]}">&nbsp
 		<label>Grade:</label><input class="grade" type="text" value="${grade[3]}"><br>
-		<label>Weight:</label> <input class="weight" type="text" value="${weight[4}">&nbsp
+		<label>Weight:</label> <input class="weight" type="text" value="${weight[4]}">&nbsp
 		<label>Grade:</label><input class="grade" type="text" value="${grade[4]}"><br>
 		<label>Weight:</label> <input class="weight" type="text" value="${weight[5]}">&nbsp
 		<label>Grade:</label><input class="grade" type="text" value="${grade[5]}"><br>
