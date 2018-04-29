@@ -79,12 +79,11 @@
 	<h2> Letter Grade: </h2>
 
 	<?php
-	//find letter grade
-	if ($totalPts >= $AMin) echo "A";
-	else if ($totalPts >= BMin && $totalPts <= $BMax ) echo "B";
-	else if ($totalPts >= CMin && $totalPts <= $CMax ) echo "C";
-	else if ($totalPts >= DMin && $totalPts <= $DMax ) echo "D";
-	else if ($totalPts <= $FMax ) echo "F";
-?>
+	   //find letter grade
+	   if ($AMin <= $totalPts) echo "A";
+	   else if ($BMin <= $totalPts && $totalPts <= $BMax ) echo "B";
+	   else if ($CMin <= $totaPts && $totalPts <= $CMax ) echo "C";
+	   else if ($DMin <= $totalPts && $totalPts <= $DMax ) echo "D";
+	   else if ($totalPts <= $FMax ) echo "F";  ?>
 </body>
 </html>
